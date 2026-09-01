@@ -219,7 +219,7 @@ function render(){
 
   // podium only shown for unfiltered overall/week top3, hide when searching or college-filtered narrows below 3
   const podiumEl = document.getElementById('podium');
-  if (!state.query.trim() && filtered.length >= 3 && state.college === "All"){
+  if (!state.query.trim() && filtered.length >= 3){
     const top3 = filtered.slice(0,3);
     const order = [top3[1], top3[0], top3[2]];
     const cls = ['second','first','third'];
